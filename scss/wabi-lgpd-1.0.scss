@@ -1,0 +1,272 @@
+// ############################################
+// #  Lei Geral de Proteção de Dados (LGPD)   #
+// ############################################
+
+// ################
+// #  Variables   #
+// ################
+
+// Font
+$font-stack: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-size: 1.5rem;
+
+// Diaog
+$container-bg: transparent;
+$dialog-bg: white;
+$dialog-border: .1rem solid #ccc;
+$dialog-title-color: #444;
+$dialog-title-font-size: 1.6rem;
+$dialog-link-color: #0099cc;
+$dialog-link-hover-color: #1967d2;
+$message-color: #444;
+
+// Buttons
+$btn-font-size: $font-size;
+$btn-line-height: $font-size + .2rem;
+$btn-padding: 1rem;
+$btn-bg: #1967d2;
+$btn-border: .1rem solid #ccc;
+$btn-color: white;
+$btn-hover-bg: #1a53a1;
+$btn-hover-color: white;
+
+// ############
+// #  Geral   #
+// ############
+html {
+	font-size: 62.5%;
+}
+
+.text-center { text-align: center !important; }
+
+// ################
+// #  Container   #
+// ################
+.wabiLGPD-container {
+	position: fixed;
+	background: $container-bg;
+	font-family: $font-stack;
+	font-size: $font-size;
+	line-height: $font-size + .4rem;
+	bottom: 0;
+	left: 0;
+	max-width: 50rem;
+	max-height: 98%;
+	overflow-y: auto;
+	display: none;
+	z-index: 99999;
+	&.active {
+		display: block;
+	}
+	h1 {
+		color: $dialog-title-color;
+		font-size: $dialog-title-font-size;
+	}
+	a {
+		color: $dialog-link-color;
+		text-decoration: none;
+		&:hover {
+			color: $dialog-link-hover-color;
+			text-decoration: underline;
+		}
+		&:focus {
+			text-decoration: underline overline;
+		}
+	}
+	p {
+		color: $message-color;
+	}
+
+	// ########################
+	// #  Dialog / Settings   #
+	// ########################
+	.wabiLGPD-settings,
+	.wabiLGPD-dialog {
+		background: $dialog-bg;
+		border: $dialog-border;
+		margin: 0 2rem 2rem 2rem;
+		padding: 1rem 2rem;
+	}
+
+	// #############
+	// #  Dialog   #
+	// #############
+	.wabiLGPD-dialog {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		display: none;
+		&.active {
+			display: block;
+		}
+		.wabiLGPD-buttons,
+		.wabiLGPD-message {
+			flex: 1 1 auto;
+		}
+	}
+
+	// ##############
+	// #  Buttons   #
+	// ##############
+	.wabiLGPD-buttons {
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: .5rem;
+		.wabiLGPD-btn {
+			flex: 1 1 20rem;
+			background: $btn-bg;
+			border: $btn-border;
+			color: $btn-color;
+			font-family: $font-stack;
+			font-size: $btn-font-size;
+			line-height: $btn-line-height;
+			text-align: center;
+			outline: 0;
+			padding: $btn-padding;
+			cursor: pointer;
+			transition: all .3s ease;
+			&:hover {
+				background: $btn-hover-bg;
+				color: $btn-hover-color;
+			}
+			&:focus {
+				text-decoration: underline overline;
+			}
+		}
+	}
+
+	// close button
+	.wabiLGPD-close-btn {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 1rem 1.2rem;
+		font-size: 2rem;
+		font-weight: bolder;
+		color: $message-color;
+		&:hover {
+			background: rgba(#e11c22, .1);
+			color: $message-color;
+			text-decoration: none;
+		}
+		&:focus {
+			text-decoration: underline overline;
+		}
+	}
+	// ###############
+	// #  Settings   #
+	// ###############
+	.wabiLGPD-settings {
+		position: relative;
+		display: none;
+		&.active {
+			display: block;
+		}
+		// Accordion
+		.wabiLGPD-accordion {
+			.wabiLGPD-accordion-item {
+				color: $message-color;
+				.wabiLGPD-accordion-item-header {
+					display: flex;
+					justify-content: space-between;
+					gap: .5rem;
+					border: .1rem solid #ccc;
+					padding: .5rem;
+					.wabiLGPD-settings-text {
+						flex: 3 1 30rem;
+						cursor: pointer;
+						line-height: 2.4rem;
+						font-weight: bold;
+					}
+					// On/Off Switch
+					.wabiLGPD-on-off {
+						flex: 1 2 10rem;
+						text-align: right;
+						label {
+							position: relative;
+							display: inline-block;
+							width: 4.4rem;
+							height: 2.4rem;
+							input {
+								opacity: 0;
+								width: 0;
+								height: 0;
+								&:checked {
+									& + span {
+										background-color: #1cac78;
+										&:before {
+											-webkit-transform: translateX(1.8rem);
+											-ms-transform: translateX(1.8rem);
+											transform: translateX(1.8rem);
+										}
+									}
+								}
+								&:disabled {
+									& + span {
+										background-color: rgba(#1cac78, .5);
+									}
+								}
+								&:focus + span {
+								  	box-shadow: 0 0 1px #2196F3;
+								}
+							}
+							span {
+								position: absolute;
+								cursor: pointer;
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								background-color: #ccc;
+								-webkit-transition: .4s;
+								transition: .4s;
+								border-radius: 2.4rem;
+								&:before {
+									position: absolute;
+									content: "";
+									height: 1.6rem;
+									width: 1.6rem;
+									left: .4rem;
+									bottom: .4rem;
+									background-color: white;
+									-webkit-transition: .4s;
+									transition: .4s;
+								  	border-radius: 50%;
+								}
+							}
+						}
+					}
+				}
+				.wabiLGPD-accordion-body {
+					max-height: 0;
+					overflow: hidden;
+					margin-bottom: .5rem;
+					transition: max-height .1s ease;
+					&.active {
+						max-height: 100rem;
+						border: .1rem solid #ccc;
+						border-top: 0;
+						padding: 1rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+// ###############
+// #   < 500px   #
+// ###############
+@media screen and (max-width: 500px) {
+	// ################
+	// #  Container   #
+	// ################
+	.wabiLGPD-container {
+		.wabiLGPD-dialog {
+			padding: .5rem;
+			margin: 0 1rem 1rem 1rem;
+		}
+	}
+}

@@ -1,0 +1,165 @@
+html {
+  font-size: 62.5%; }
+
+.text-center {
+  text-align: center !important; }
+
+.wabiLGPD-container {
+  position: fixed;
+  background: transparent;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  bottom: 0;
+  left: 0;
+  max-width: 50rem;
+  max-height: 98%;
+  overflow-y: auto;
+  display: none;
+  z-index: 99999; }
+  .wabiLGPD-container.active {
+    display: block; }
+  .wabiLGPD-container h1 {
+    color: #444;
+    font-size: 1.6rem; }
+  .wabiLGPD-container a {
+    color: #0099cc;
+    text-decoration: none; }
+    .wabiLGPD-container a:hover {
+      color: #1967d2;
+      text-decoration: underline; }
+    .wabiLGPD-container a:focus {
+      text-decoration: underline overline; }
+  .wabiLGPD-container p {
+    color: #444; }
+  .wabiLGPD-container .wabiLGPD-settings,
+  .wabiLGPD-container .wabiLGPD-dialog {
+    background: white;
+    border: 0.1rem solid #ccc;
+    margin: 0 2rem 2rem 2rem;
+    padding: 1rem 2rem; }
+  .wabiLGPD-container .wabiLGPD-dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none; }
+    .wabiLGPD-container .wabiLGPD-dialog.active {
+      display: block; }
+    .wabiLGPD-container .wabiLGPD-dialog .wabiLGPD-buttons,
+    .wabiLGPD-container .wabiLGPD-dialog .wabiLGPD-message {
+      flex: 1 1 auto; }
+  .wabiLGPD-container .wabiLGPD-buttons {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .5rem; }
+    .wabiLGPD-container .wabiLGPD-buttons .wabiLGPD-btn {
+      flex: 1 1 20rem;
+      background: #1967d2;
+      border: 0.1rem solid #ccc;
+      color: white;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+      text-align: center;
+      outline: 0;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all .3s ease; }
+      .wabiLGPD-container .wabiLGPD-buttons .wabiLGPD-btn:hover {
+        background: #1a53a1;
+        color: white; }
+      .wabiLGPD-container .wabiLGPD-buttons .wabiLGPD-btn:focus {
+        text-decoration: underline overline; }
+  .wabiLGPD-container .wabiLGPD-close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem 1.2rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #444; }
+    .wabiLGPD-container .wabiLGPD-close-btn:hover {
+      background: rgba(225, 28, 34, 0.1);
+      color: #444;
+      text-decoration: none; }
+    .wabiLGPD-container .wabiLGPD-close-btn:focus {
+      text-decoration: underline overline; }
+  .wabiLGPD-container .wabiLGPD-settings {
+    position: relative;
+    display: none; }
+    .wabiLGPD-container .wabiLGPD-settings.active {
+      display: block; }
+    .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item {
+      color: #444; }
+      .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header {
+        display: flex;
+        justify-content: space-between;
+        gap: .5rem;
+        border: .1rem solid #ccc;
+        padding: .5rem; }
+        .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header .wabiLGPD-settings-text {
+          flex: 3 1 30rem;
+          cursor: pointer;
+          line-height: 2.4rem;
+          font-weight: bold; }
+        .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header .wabiLGPD-on-off {
+          flex: 1 2 10rem;
+          text-align: right; }
+          .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header .wabiLGPD-on-off label {
+            position: relative;
+            display: inline-block;
+            width: 4.4rem;
+            height: 2.4rem; }
+            .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header .wabiLGPD-on-off label input {
+              opacity: 0;
+              width: 0;
+              height: 0; }
+              .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header .wabiLGPD-on-off label input:checked + span {
+                background-color: #1cac78; }
+                .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header .wabiLGPD-on-off label input:checked + span:before {
+                  -webkit-transform: translateX(1.8rem);
+                  -ms-transform: translateX(1.8rem);
+                  transform: translateX(1.8rem); }
+              .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header .wabiLGPD-on-off label input:disabled + span {
+                background-color: rgba(28, 172, 120, 0.5); }
+              .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header .wabiLGPD-on-off label input:focus + span {
+                box-shadow: 0 0 1px #2196F3; }
+            .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header .wabiLGPD-on-off label span {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #ccc;
+              -webkit-transition: .4s;
+              transition: .4s;
+              border-radius: 2.4rem; }
+              .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-item-header .wabiLGPD-on-off label span:before {
+                position: absolute;
+                content: "";
+                height: 1.6rem;
+                width: 1.6rem;
+                left: .4rem;
+                bottom: .4rem;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+                border-radius: 50%; }
+      .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-body {
+        max-height: 0;
+        overflow: hidden;
+        margin-bottom: .5rem;
+        transition: max-height .1s ease; }
+        .wabiLGPD-container .wabiLGPD-settings .wabiLGPD-accordion .wabiLGPD-accordion-item .wabiLGPD-accordion-body.active {
+          max-height: 100rem;
+          border: .1rem solid #ccc;
+          border-top: 0;
+          padding: 1rem; }
+
+@media screen and (max-width: 500px) {
+  .wabiLGPD-container .wabiLGPD-dialog {
+    padding: .5rem;
+    margin: 0 1rem 1rem 1rem; } }

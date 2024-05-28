@@ -1,0 +1,64 @@
+// ################
+// #  Variables   #
+// ################
+
+// Font
+$font-stack: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-size: 1.5rem;
+
+
+//#############
+//#  General  #
+//#############
+html,body {
+	margin:0;
+	padding: 1rem;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	font-size: $font-size;
+	font-family: $font-stack;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: #0077b6;
+	text-decoration: none;
+	&:hover {
+		color: rgba(#0077b6,.7);
+		text-decoration: underline;
+	}
+}
+
+small {
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+
+pre {
+	background: #9c9c9c;
+}
+
+*,
+*:after,
+*::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*:-moz-focusring {
+  	outline: 0;
+}
