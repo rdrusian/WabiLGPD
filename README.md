@@ -1,6 +1,6 @@
 # WabiLGPD
 
-## WabiLGPD, um script para implementar gestão de cookies em seu site
+### WabiLGPD, um script para implementar gestão de cookies em seu site
 
 Cria um formulário customizável de consentimento da Lei Geral de Proteção de Dados Pessoais (LGPD), com suporte multilíngue, além de carregar o Google Analytics e Adsense automaticamente mediante ao consentimento do usuário
 
