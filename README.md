@@ -1,4 +1,4 @@
-#WabiLGPD
+# WabiLGPD
 
 ##WabiLGPD, um script para implementar gestão de cookies em seu site
 
