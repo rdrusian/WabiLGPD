@@ -13,5 +13,3 @@ https://telazul.drusian.com.br/en/article/wabilgpd-a-script-to-implement-cookie-
 
 ### Español
 https://telazul.drusian.com.br/es/articulo/wabilgpd-un-script-para-implementar-la-gestion-de-cookies-en-tu-sitio
-
-Contato
